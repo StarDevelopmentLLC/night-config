@@ -6,7 +6,7 @@ plugins {
 // Use the build script defined in buildSrc
 
 dependencies {
-    testImplementation(project(":test-shared"))
+
 }
 
 // Build a multi-release JAR with the following java versions

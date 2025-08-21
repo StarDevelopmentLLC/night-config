@@ -10,6 +10,4 @@ multiRelease {
 dependencies {
 	api(project(":core"))
 	implementation(libs.typesafeConfig)
-
-	testImplementation(project(":test-shared"))
 }

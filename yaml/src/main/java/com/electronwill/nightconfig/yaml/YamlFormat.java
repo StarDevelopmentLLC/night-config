@@ -5,11 +5,9 @@ import com.electronwill.nightconfig.core.ConfigFormat;
 import com.electronwill.nightconfig.core.file.FormatDetector;
 import com.electronwill.nightconfig.core.io.ConfigParser;
 import com.electronwill.nightconfig.core.io.ConfigWriter;
-import org.yaml.snakeyaml.Yaml;
+import org.yaml.snakeyaml.*;
 
-import java.util.List;
-import java.util.Set;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Supplier;
 
 /**
@@ -17,7 +15,13 @@ import java.util.function.Supplier;
  */
 public final class YamlFormat implements ConfigFormat<Config> {
 	private static final ThreadLocal<YamlFormat> LOCAL_DEFAULT_FORMAT = ThreadLocal.withInitial(
-			() -> new YamlFormat(new Yaml()));
+			() -> {
+				LoaderOptions loaderOptions = new LoaderOptions();
+				loaderOptions.setProcessComments(true);
+				DumperOptions dumperOptions = new DumperOptions();
+				dumperOptions.setProcessComments(true);
+				return new YamlFormat(new Yaml(loaderOptions, dumperOptions));
+			});
 
 	/**
 	 * @return the default instance of HoconFormat
@@ -85,7 +89,7 @@ public final class YamlFormat implements ConfigFormat<Config> {
 
 	@Override
 	public boolean supportsComments() {
-		return false;
+		return true;
 	}
 
 	@Override
