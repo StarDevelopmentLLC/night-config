@@ -23,8 +23,8 @@ java {
 // Add Automatic-Module-Name for JPMS support, and some other attributes for OSGI
 tasks.jar {
 	manifest {
-		attributes["Automatic-Module-Name"] = "com.electronwill.nightconfig.${project.name}"
-		attributes["Bundle-SymbolicName"] = "com.electronwill.nightconfig.${project.name}"
+		attributes["Automatic-Module-Name"] = "com.stardevllc.nightconfig.${project.name}"
+		attributes["Bundle-SymbolicName"] = "com.stardevllc.nightconfig.${project.name}"
 		attributes["Bundle-Name"] = "night-config:${project.name}"
 		attributes["Bundle-Version"] = "${project.version}"
 	}

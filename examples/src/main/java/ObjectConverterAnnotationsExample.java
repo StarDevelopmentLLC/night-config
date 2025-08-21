@@ -1,14 +1,14 @@
-import com.electronwill.nightconfig.core.Config;
-import com.electronwill.nightconfig.core.conversion.Conversion;
-import com.electronwill.nightconfig.core.conversion.Converter;
-import com.electronwill.nightconfig.core.conversion.ObjectConverter;
-import com.electronwill.nightconfig.core.conversion.Path;
-import com.electronwill.nightconfig.core.conversion.SpecDoubleInRange;
-import com.electronwill.nightconfig.core.conversion.SpecIntInRange;
-import com.electronwill.nightconfig.core.conversion.SpecNotNull;
-import com.electronwill.nightconfig.core.conversion.SpecStringInArray;
-import com.electronwill.nightconfig.core.conversion.SpecValidator;
-import com.electronwill.nightconfig.core.utils.StringUtils;
+import com.stardevllc.nightconfig.core.Config;
+import com.stardevllc.nightconfig.core.conversion.Conversion;
+import com.stardevllc.nightconfig.core.conversion.Converter;
+import com.stardevllc.nightconfig.core.conversion.ObjectConverter;
+import com.stardevllc.nightconfig.core.conversion.Path;
+import com.stardevllc.nightconfig.core.conversion.SpecDoubleInRange;
+import com.stardevllc.nightconfig.core.conversion.SpecIntInRange;
+import com.stardevllc.nightconfig.core.conversion.SpecNotNull;
+import com.stardevllc.nightconfig.core.conversion.SpecStringInArray;
+import com.stardevllc.nightconfig.core.conversion.SpecValidator;
+import com.stardevllc.nightconfig.core.utils.StringUtils;
 import java.util.List;
 import java.util.function.Predicate;
 

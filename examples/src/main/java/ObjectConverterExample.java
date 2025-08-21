@@ -1,5 +1,5 @@
-import com.electronwill.nightconfig.core.Config;
-import com.electronwill.nightconfig.core.conversion.ObjectConverter;
+import com.stardevllc.nightconfig.core.Config;
+import com.stardevllc.nightconfig.core.conversion.ObjectConverter;
 
 /**
  * @author TheElectronWill

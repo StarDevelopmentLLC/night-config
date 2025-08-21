@@ -1,6 +1,6 @@
-import com.electronwill.nightconfig.core.Config;
-import com.electronwill.nightconfig.core.conversion.ConversionTable;
-import com.electronwill.nightconfig.core.utils.StringUtils;
+import com.stardevllc.nightconfig.core.Config;
+import com.stardevllc.nightconfig.core.conversion.ConversionTable;
+import com.stardevllc.nightconfig.core.utils.StringUtils;
 import java.util.List;
 
 /**

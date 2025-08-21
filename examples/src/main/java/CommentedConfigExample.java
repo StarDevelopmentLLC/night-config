@@ -1,6 +1,6 @@
-import com.electronwill.nightconfig.core.CommentedConfig;
-import com.electronwill.nightconfig.core.io.WritingMode;
-import com.electronwill.nightconfig.toml.TomlWriter;
+import com.stardevllc.nightconfig.core.CommentedConfig;
+import com.stardevllc.nightconfig.core.io.WritingMode;
+import com.stardevllc.nightconfig.toml.TomlWriter;
 import java.io.File;
 
 /**

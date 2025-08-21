@@ -1,5 +1,5 @@
-import com.electronwill.nightconfig.core.Config;
-import com.electronwill.nightconfig.core.ConfigSpec;
+import com.stardevllc.nightconfig.core.Config;
+import com.stardevllc.nightconfig.core.ConfigSpec;
 import java.util.Arrays;
 
 /**

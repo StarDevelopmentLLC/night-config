@@ -1,4 +1,4 @@
-import com.electronwill.nightconfig.core.file.FileConfig;
+import com.stardevllc.nightconfig.core.file.FileConfig;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,4 @@
-package com.electronwill.nightconfig.core.serde;
+package com.stardevllc.nightconfig.core.serde;
 
 import java.util.Optional;
 import java.util.Collections;
@@ -10,8 +10,10 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.RecordComponent;
 
-import com.electronwill.nightconfig.core.UnmodifiableConfig;
-import static com.electronwill.nightconfig.core.NullObject.NULL_OBJECT;
+import com.stardevllc.nightconfig.core.UnmodifiableConfig;
+import com.stardevllc.nightconfig.core.serde.*;
+
+import static com.stardevllc.nightconfig.core.NullObject.NULL_OBJECT;
 
 /**
  * Deserialize a {@code Config} to the fields of a Java object.

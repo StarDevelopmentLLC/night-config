@@ -1,0 +1,26 @@
+package com.stardevllc.nightconfig.core.conversion;
+
+import java.lang.annotation.*;
+
+/**
+ * Indicates the path, in the config, of the annotated element. Unlike {@link AdvancedPath}, Path
+ * accepts a simple String, so it's not possible to use dots in key names (because dots are
+ * interpreted as a separator between each key). If you have a complicated path with dots in key
+ * names, use {@link AdvancedPath} instead of Path.
+ *
+ * @deprecated Use the new package {@link com.stardevllc.nightconfig.core.serde} with {@code serde.annotations}.
+ * @author TheElectronWill
+ */
+@Deprecated
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.FIELD, ElementType.TYPE})
+public @interface Path {
+	/**
+	 * The path of the value in the configuration. Each key is separated by a dot.
+	 * <p>
+	 * Use {@link AdvancedPath} if you have a key that contains dots.
+	 *
+	 * @return the path in the config
+	 */
+	String value();
+}

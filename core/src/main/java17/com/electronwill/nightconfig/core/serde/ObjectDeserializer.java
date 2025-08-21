@@ -1,11 +1,11 @@
-package com.electronwill.nightconfig.core.serde;
+package com.stardevllc.nightconfig.core.serde;
 
 import java.util.Collection;
 import java.util.Map;
 import java.util.function.Supplier;
 import java.util.Optional;
 
-import com.electronwill.nightconfig.core.UnmodifiableConfig;
+import com.stardevllc.nightconfig.core.UnmodifiableConfig;
 
 public final class ObjectDeserializer extends AbstractObjectDeserializer {
 	// This is the Java 17 version of ObjectDeserializer,
