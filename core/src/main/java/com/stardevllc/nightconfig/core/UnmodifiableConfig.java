@@ -675,6 +675,23 @@ public interface UnmodifiableConfig {
 			return (char)value;
 		}
 	}
+    
+    default String getString(String path) {
+        return get(path);
+    }
+    
+    default String getString(List<String> path) {
+        return get(path);
+    }
+    
+    default String getStringOrElse(String path, String defaultValue) {
+        return getOrElse(path, defaultValue);
+    }
+    
+    default String getStringOrElse(List<String> path, String defaultValue) {
+        return getOrElse(path, defaultValue);
+    }
+    
 	// ---- End of getters ----
 
 

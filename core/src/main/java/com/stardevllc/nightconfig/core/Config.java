@@ -5,6 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Supplier;
 
 import com.stardevllc.nightconfig.core.concurrent.ConcurrentConfig;
+import com.stardevllc.starlib.helper.StringHelper;
 
 import static com.stardevllc.nightconfig.core.utils.StringUtils.split;
 
@@ -15,6 +16,22 @@ import static com.stardevllc.nightconfig.core.utils.StringUtils.split;
  * @author TheElectronWill
  */
 public interface Config extends UnmodifiableConfig {
+
+	default void addDefault(String path, Object value, String... comments) {
+		set(path, value);
+
+		if (this instanceof CommentedConfig commentedConfig) {
+			commentedConfig.setComment(path, StringHelper.join(comments, "\n"));
+		}
+	}
+
+	default void addDefault(List<String> path, Object value, String... comments) {
+		set(path, value);
+
+		if (this instanceof CommentedConfig commentedConfig) {
+			commentedConfig.setComment(path, StringHelper.join(comments, "\n"));
+		}
+	}
 
 	/**
 	 * Sets a config value.

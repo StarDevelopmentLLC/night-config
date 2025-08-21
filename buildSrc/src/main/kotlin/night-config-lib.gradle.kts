@@ -1,23 +1,36 @@
-import org.gradle.api.tasks.testing.logging.TestLogEvent
-
 // Common setup shared by all nightconfig libraries (core, toml, ...)
 
 plugins {
     `java-library`
     `maven-publish`
-    signing
-	jacoco
 }
 
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+
+	maven { url = uri("https://repo.stardevllc.com/releases") }
+}
+
+dependencies {
+	compileOnly("com.stardevllc:StarLib:0.13.0")
 }
 
 // When building the JAR, also build some additional jars.
 java {
     withJavadocJar()
     withSourcesJar()
+
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+tasks.withType<Javadoc> {
+	options {
+		this as StandardJavadocDocletOptions
+		addBooleanOption("Xdoclint:-html", true)
+	}
 }
 
 // Add Automatic-Module-Name for JPMS support, and some other attributes for OSGI
